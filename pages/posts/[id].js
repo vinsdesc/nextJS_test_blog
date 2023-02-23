@@ -1,4 +1,4 @@
-import Layout from '../../components/Layout';
+import myLayout from '../../components/myLayout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import DateWidget from '../../components/date';
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <myLayout>
       <Head>
         <title>{postData.title}</title>
       </Head>
@@ -34,6 +34,6 @@ export default function Post({ postData }) {
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-    </Layout>
+    </myLayout>
   );
 }
