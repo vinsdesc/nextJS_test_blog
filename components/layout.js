@@ -16,6 +16,7 @@ export default function Layout({ children, home }) {
           name='description'
           content='Learn how to build a personal website using Next.js'
         />
+        {/* comment */}
         <meta
           property='og:image'
           content={`https://og-image.vercel.app/${encodeURI(
